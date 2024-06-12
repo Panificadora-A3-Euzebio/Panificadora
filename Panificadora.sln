@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panificadora", "Panificadora\Panificadora.csproj", "{E51E8D71-5CD5-489D-BB9E-9902A18A17BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E51E8D71-5CD5-489D-BB9E-9902A18A17BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E51E8D71-5CD5-489D-BB9E-9902A18A17BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E51E8D71-5CD5-489D-BB9E-9902A18A17BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E51E8D71-5CD5-489D-BB9E-9902A18A17BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E68731F-4465-4074-97ED-090CFC3AFEA3}
+	EndGlobalSection
+EndGlobal
