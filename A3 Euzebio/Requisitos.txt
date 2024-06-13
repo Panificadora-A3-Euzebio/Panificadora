@@ -1,0 +1,6 @@
+Funcionais
+
+Cadastrar itens
+Decrementar itens
+Emitir alerta quando estoque 
+de alguns produtos estiver baixo
