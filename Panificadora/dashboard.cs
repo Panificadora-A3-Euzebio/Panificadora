@@ -26,5 +26,24 @@ namespace Panificadora
         {
 
         }
+
+        private void adicionar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void remover_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadastrar_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+
+            cadastro.Show();
+
+            this.Hide();
+        }
     }
 }

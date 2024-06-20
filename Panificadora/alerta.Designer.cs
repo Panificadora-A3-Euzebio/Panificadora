@@ -99,13 +99,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            dataGridView1.Rows.Add("Sacos de Trigo", "50Kg", 1000);
-            dataGridView1.Rows.Add("Pacote de Fermento em Pó", "50g", 700);
-            dataGridView1.Rows.Add("Sacos de Sal", "1Kg", 500);
-            dataGridView1.Rows.Add("Lenha para Forno de Pizza", "1000Kg", 1000);
-            dataGridView1.Rows.Add("Sacos de Açúcar", "5Kg", 400);
-            dataGridView1.Rows.Add("Sacos de Manteiga", "1Kg", 300);
-            dataGridView1.Rows.Add("Latas de Óleo", "1L", 400);
+            
 
         }
 
