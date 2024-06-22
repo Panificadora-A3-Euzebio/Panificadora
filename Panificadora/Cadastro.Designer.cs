@@ -35,9 +35,6 @@
             this.qtdText = new System.Windows.Forms.TextBox();
             this.cadastrar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.undDeVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.undVenda = new System.Windows.Forms.ComboBox();
             this.Voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -100,33 +97,11 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Produto,
-            this.undDeVenda,
-            this.qtdTotal});
             this.dataGridView1.Location = new System.Drawing.Point(87, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(341, 196);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // Produto
-            // 
-            this.Produto.HeaderText = "Produto";
-            this.Produto.Name = "Produto";
-            this.Produto.ReadOnly = true;
-            // 
-            // undDeVenda
-            // 
-            this.undDeVenda.HeaderText = "UND de Venda";
-            this.undDeVenda.Name = "undDeVenda";
-            this.undDeVenda.ReadOnly = true;
-            // 
-            // qtdTotal
-            // 
-            this.qtdTotal.HeaderText = "QTD";
-            this.qtdTotal.Name = "qtdTotal";
-            this.qtdTotal.ReadOnly = true;
             // 
             // undVenda
             // 
@@ -185,9 +160,6 @@
         private System.Windows.Forms.TextBox qtdText;
         private System.Windows.Forms.Button cadastrar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn undDeVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtdTotal;
         private System.Windows.Forms.ComboBox undVenda;
         private System.Windows.Forms.Button Voltar;
     }

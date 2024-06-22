@@ -110,6 +110,7 @@
     <Compile Include="alerta.Designer.cs">
       <DependentUpon>alerta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexao.cs" />
     <Compile Include="produto.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>

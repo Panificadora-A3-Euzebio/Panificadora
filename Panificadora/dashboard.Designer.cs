@@ -31,9 +31,6 @@ namespace Panificadora
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadeDeVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cadastrarItens = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,40 +38,22 @@ namespace Panificadora
             this.remover = new System.Windows.Forms.Button();
             this.adicionar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.valorTxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Produto,
-            this.unidadeDeVenda,
-            this.qtdProduto});
             this.dataGridView1.Location = new System.Drawing.Point(177, 31);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(341, 262);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // Produto
-            // 
-            this.Produto.HeaderText = "Produto";
-            this.Produto.Name = "Produto";
-            this.Produto.ReadOnly = true;
-            // 
-            // unidadeDeVenda
-            // 
-            this.unidadeDeVenda.HeaderText = "Unidade de venda";
-            this.unidadeDeVenda.Name = "unidadeDeVenda";
-            this.unidadeDeVenda.ReadOnly = true;
-            // 
-            // qtdProduto
-            // 
-            this.qtdProduto.HeaderText = "QTD";
-            this.qtdProduto.Name = "qtdProduto";
-            this.qtdProduto.ReadOnly = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cadastrarItens
             // 
@@ -133,22 +112,34 @@ namespace Panificadora
             this.label3.TabIndex = 8;
             this.label3.Text = "Quantidade:";
             // 
-            // textBox1
+            // valorTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(257, 313);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 20);
-            this.textBox1.TabIndex = 7;
+            this.valorTxt.Location = new System.Drawing.Point(257, 313);
+            this.valorTxt.Name = "valorTxt";
+            this.valorTxt.Size = new System.Drawing.Size(40, 20);
+            this.valorTxt.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 65);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Selecione a linha \r\nque deseja do produto \r\nque deseja realizar o \r\nincremento ou" +
+    " decremento \r\nda quantidade.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 360);
+            this.ClientSize = new System.Drawing.Size(528, 360);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.remover);
             this.Controls.Add(this.adicionar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.valorTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cadastrarItens);
@@ -169,13 +160,11 @@ namespace Panificadora
         private System.Windows.Forms.Button cadastrarItens;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidadeDeVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtdProduto;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Button remover;
         private System.Windows.Forms.Button adicionar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox valorTxt;
+        private System.Windows.Forms.Label label4;
     }
 }

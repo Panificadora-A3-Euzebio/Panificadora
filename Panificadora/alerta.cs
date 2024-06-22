@@ -12,6 +12,7 @@ namespace Panificadora
 {
     public partial class alerta : Form
     {
+        public bool Okpress { get; set; }
         public alerta()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace Panificadora
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Ok_Click(object sender, EventArgs e)
+        {
+            Okpress = true;
+            this.Close();
         }
     }
 }

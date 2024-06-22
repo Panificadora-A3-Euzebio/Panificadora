@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,31 @@ namespace Panificadora
 {
     public partial class Cadastro : Form
     {
+        Conexao conexao = new Conexao();
+
         public Cadastro()
         {
             InitializeComponent();
+            inserirDadosNoDataGridView1();
+        }
+        
+        private void inserirDadosNoDataGridView1()
+        {   
+            // Insere a tabela de produtos no data GridView;
+            try
+            {
+                String solicitacao = "SELECT * FROM produtos;";
+
+                DataTable dataTable = conexao.GetDataTable(solicitacao);
+
+                dataGridView1.DataSource = dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
         }
 
         private void Cadastro_Click(object sender, EventArgs e)
@@ -44,7 +68,7 @@ namespace Panificadora
                 
                 if (qtdProduto >= 0)
                 {
-                    MessageBox.Show("Cadastro bem sucedido!!!");
+                    
                     produtoText.Clear();
                     qtdText.Clear();
                     undVenda.SelectedIndex = 0;
@@ -60,15 +84,28 @@ namespace Panificadora
                 MessageBox.Show("São aceitos apenas números para quantidade de um intem.");
                 qtdText.Clear();
             }
-            
-            // Faz adição do produto cadastrado no na tabela.
-            produto produto = new produto(nomeProduto, undDeVenda, qtdProduto);
 
-            dataGridView1.Rows.Add(nomeProduto, undDeVenda, qtdProduto);
 
-            // falta fazer a implementação deste cadastro para o banco, o ideal que as informações da tabela sejam puxadas do direto do ban
 
+            try
+            {
+                // Faz o cadastro dos dados no banco
+
+
+                String solicitacao = $"INSERT INTO produtos (NomeProduto, quantidade, UnidadeDePeso)" +
+                                     $"VALUES" +
+                                     $"('{nomeProduto}',{qtdProduto},'{undDeVenda}')";
+
+                conexao.SetSqlCommand(solicitacao);
+
+                inserirDadosNoDataGridView1();
+                MessageBox.Show("Cadastro bem sucedido!!!");
+                
+            }
+            catch (Exception es) { Console.WriteLine("" + es); }
         }
+
+        
 
         private void Cadastro_Load(object sender, EventArgs e)
         {

@@ -13,7 +13,7 @@ namespace Panificadora
 {
     public partial class login : Form
     {
-        
+        public bool loginBemSucedido { get; set; }
 
         public login()
         {
@@ -29,10 +29,10 @@ namespace Panificadora
             if (UserLogin.Equals("admin") && senha.Equals("admin"))
             {
                 MessageBox.Show("Login realizado");
+                loginBemSucedido = true;
                 dashboard dashboard = new dashboard();
-
-                dashboard.Show(); 
-                this.Hide();
+                //dashboard.Show(); 
+                this.Close();
             }
             else 
             {
