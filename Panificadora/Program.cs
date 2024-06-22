@@ -28,8 +28,11 @@ namespace Panificadora
 
             if (login.loginBemSucedido)
             {
+                // timer que inicia a verificação.
+                // só é acionado apos o login.
+                
                 Timer timer = new Timer();
-                timer.Interval = 1000; // intervalo de 60 segundos
+                timer.Interval = 60000; // intervalo de 60 segundos
                 timer.Tick += (sender, e) => verificaQuantidade();
                 timer.Start();
 
@@ -72,20 +75,17 @@ namespace Panificadora
                     }
                 }
 
-                if (new alerta().Okpress)
+                if (qtdLenha < 250 || qtdTrigo < 250)
                 {
-                    if (qtdLenha < 250 || qtdTrigo < 250)
+                    if (alerta == null || alerta.IsDisposed)
                     {
-                        if (alerta == null || alerta.IsDisposed)
-                        {
-                            alerta = new alerta();
-                        }
-                        alerta.Show();
+                        alerta = new alerta();
                     }
-                    else if (alerta != null && !alerta.IsDisposed)
-                    {
-                        alerta.Hide();
-                    }
+                    alerta.Show();
+                }
+                else if (alerta != null && !alerta.IsDisposed)
+                {
+                    alerta.Hide();
                 }
                 
             }
