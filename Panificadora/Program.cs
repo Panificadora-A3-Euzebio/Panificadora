@@ -89,9 +89,9 @@ namespace Panificadora
                 }
                 
             }
-            catch (Exception ex) 
+            catch (Exception) 
             { 
-                Debug.WriteLine(ex.Message);
+                
             }
         }
     }

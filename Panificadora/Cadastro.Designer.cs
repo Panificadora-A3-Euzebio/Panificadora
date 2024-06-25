@@ -109,7 +109,7 @@
             this.undVenda.Items.AddRange(new object[] {
             "",
             "50Kg",
-            "1Kg",
+            "50g",
             "1Kg",
             "5kg",
             "1L"});
