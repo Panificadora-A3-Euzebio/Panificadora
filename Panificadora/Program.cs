@@ -13,7 +13,12 @@ namespace Panificadora
     internal static class Program
     {
         /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
+        /// Programa: Controlador de estoque de uma panificadora. 
+        /// 
+        /// Data: 2024/06/22                            Versão: 2024_01_01
+        /// Uc: Modelagem de Software.
+        /// Nome: Gustavo Henrique
+        /// 
         /// </summary>
 
         private static alerta alerta;
