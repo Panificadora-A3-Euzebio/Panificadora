@@ -30,6 +30,7 @@ namespace Panificadora
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cadastrarItens = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -127,8 +128,7 @@ namespace Panificadora
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 65);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Selecione a linha \r\nque deseja do produto \r\nque deseja realizar o \r\nincremento ou" +
-    " decremento \r\nda quantidade.";
+            this.label4.Text = "Selecione a linha \r\nque deseja do produto \r\nque deseja realizar o \r\nincremento ou" + " decremento \r\nda quantidade.";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dashboard
@@ -145,13 +145,13 @@ namespace Panificadora
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cadastrarItens);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dashboard";
             this.Text = "dashboard";
             this.Load += new System.EventHandler(this.dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -106,13 +107,7 @@
             // undVenda
             // 
             this.undVenda.FormattingEnabled = true;
-            this.undVenda.Items.AddRange(new object[] {
-            "",
-            "50Kg",
-            "50g",
-            "1Kg",
-            "5kg",
-            "1L"});
+            this.undVenda.Items.AddRange(new object[] { "", "50Kg", "50g", "1Kg", "5kg", "1L" });
             this.undVenda.Location = new System.Drawing.Point(199, 303);
             this.undVenda.Name = "undVenda";
             this.undVenda.Size = new System.Drawing.Size(100, 21);
@@ -142,13 +137,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cadastro";
             this.Text = "Cadastro de Itens";
             this.Load += new System.EventHandler(this.Cadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
