@@ -37,7 +37,7 @@ namespace Panificadora
                 // só é acionado apos o login.
                 
                 Timer timer = new Timer();
-                timer.Interval = 60000; // intervalo de 60 segundos
+                timer.Interval = 10000; // intervalo de 60 segundos
                 timer.Tick += (sender, e) => verificaQuantidade();
                 timer.Start();
 
