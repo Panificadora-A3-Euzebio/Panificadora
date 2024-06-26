@@ -17,7 +17,7 @@ namespace Panificadora
         /// 
         /// Data: 2024/06/22                            Versão: 2024_01_01
         /// Uc: Modelagem de Software.
-        /// Nome: Gustavo Henrique
+        /// Nomes: Amanda Cardoso, Barbara Alexandra, Carlos Eduardo, Gustavo Henrique, Henrique Oliveira, João Vitor, Pedro Henrique e Rodrigo Queiroz
         /// 
         /// </summary>
 
