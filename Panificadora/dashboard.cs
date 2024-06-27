@@ -14,7 +14,7 @@ namespace Panificadora
     public partial class dashboard : Form
     {
         private int idProduto;
-        private int valorCell;
+        private int valorCellQuantidade;
         private Conexao conexao = new Conexao();
 
 
@@ -49,7 +49,12 @@ namespace Panificadora
                     MessageBox.Show("entrada invalida."); 
                     valorTxt.Clear(); 
                 }
-                
+
+            }
+            else
+            {
+                MessageBox.Show("entrada invalida.");
+                valorTxt.Clear();
             }
 
             return 0;
@@ -67,8 +72,10 @@ namespace Panificadora
 
         private void adicionar_Click(object sender, EventArgs e)
         {
-            int adicaoBanco = valorCell + validarEntradaDeDado();
+            // atualiza o valor da quantidade no banco com a soma da alteração
+            int adicaoBanco = valorCellQuantidade + validarEntradaDeDado();
 
+            
             try
             {
                 String solicitacao = $"UPDATE produtos SET quantidade = {adicaoBanco} WHERE id_produto = {idProduto};";
@@ -86,7 +93,8 @@ namespace Panificadora
 
         private void remover_Click(object sender, EventArgs e)
         {
-            int subtracaoBanco = valorCell - validarEntradaDeDado();
+            // atualiza o valor da quantidade no banco com a subtração da alteração
+            int subtracaoBanco = valorCellQuantidade - validarEntradaDeDado();
 
             try
             {
@@ -151,7 +159,7 @@ namespace Panificadora
                     }
                 }
                 idProduto = lista[0];
-                valorCell = lista[1];
+                valorCellQuantidade = lista[1];
 
             }
         }

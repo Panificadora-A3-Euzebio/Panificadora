@@ -81,7 +81,7 @@ namespace Panificadora
             }
             else
             {
-                MessageBox.Show("São aceitos apenas números para quantidade de um intem.");
+                MessageBox.Show("São aceitos apenas números para quantidade de um item.");
                 qtdText.Clear();
             }
 
